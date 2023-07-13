@@ -1,5 +1,5 @@
 const API_KEY = "857031bd197743ada0f35209231307";
-const url = "https://api.weatherapi.com/v1/forecast.json?key=857031bd197743ada0f35209231307&q=";
+const url = "https://cors-anywhere.herokuapp.com/http://api.weatherapi.com/v1/forecast.json?key=857031bd197743ada0f35209231307&q=";
 
 window.addEventListener("load", () => fetchWeather("Waterloo"));
 
