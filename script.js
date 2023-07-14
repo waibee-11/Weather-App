@@ -1,6 +1,6 @@
 const API_KEY = "857031bd197743ada0f35209231307";
-const forecast_url = "http://api.weatherapi.com/v1/forecast.json?key=857031bd197743ada0f35209231307&q=";
-const cur_url = "http://api.weatherapi.com/v1/current.json?key=857031bd197743ada0f35209231307&q="
+const forecast_url = "https://cors-anywhere.herokuapp.com/http://api.weatherapi.com/v1/forecast.json?key=857031bd197743ada0f35209231307&q=";
+const cur_url = "https://cors-anywhere.herokuapp.com/http://api.weatherapi.com/v1/current.json?key=857031bd197743ada0f35209231307&q="
 
 let query = "Waterloo";
 let type = "current";
