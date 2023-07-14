@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media.css">
+    <link rel="shortcut icon" href="evrab_logo.jpeg" type="image/x-icon">
+    <title>Evrab Weather</title>
+</head>
+<body>
+    <!-- Navbar section -->
+    <section class="navbar-section">
+        <div class="navbar-container container">
+            <div class="navbar-flex flex">
+                <a href="#" onclick="reload()">
+                    <img src="evrab_weather.jpeg" alt="">
+                </a>
+                <div class="navbar-links flex">
+                    <a href="#" class="navbar-link" id="Pune" onclick="onNavItemClick('Pune')">Pune</a>
+                    <a href="#" class="navbar-link" id="Muscat" onclick="onNavItemClick('Muscat')">Muscat</a>
+                    <a href="#" class="navbar-link" id="Waterloo" onclick="onNavItemClick('Waterloo')">Waterloo</a>
+                    <a href="#" class="navbar-link" id="Munich" onclick="onNavItemClick('Munich')">Munich</a>
+                    <a href="#" class="navbar-link" id="London" onclick="onNavItemClick('London')">London</a>
+                </div>
+                <div class="navbar-search flex">
+                    <input type="text" class="navbar-input" id="navbar-input" placeholder="e.g. Dubai">
+                    <button class="navbar-button" id="navbar-button">Search</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main section -->
+    <section class="main-section">
+        <div class="main-container container">
+            <div class="current-location flex">
+                <h2 id="current-location">Placeholder</h2>
+            </div>
+            <div class="days-7-flex flex">
+                <button class="days-7" id="current-button">Current Weather</button>
+                <button class="days-7" id="days-7-button">7 Days Forecast</button>
+            </div>
+            <div class="items-container flex" id="items-container">
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <section class="footer-section">
+        <div class="container footer-container flex">
+            <div class="images flex">
+                <img src="evrab_logo.jpeg" alt="">
+                <img src="yash_logo.jpeg" alt="">
+            </div>
+            <h5 class="footer-text">© 2023, All Rights Reserved. Yash Harshal Barve</h5>
+        </div>
+    </section>
+
+    <!-- Template -->
+    <template id="weather-item-template">
+        <div class="weather-item flex">
+            <img src="" alt="" class="weather-icon" id="weather-img">
+            <div class="weather-data flex">
+                <h1 class="weather-head" id="weather-head">Quick desc</h1>
+                <div class="max-weather flex">
+                    <h1 class="weather-temp-text">Max:</h1>
+                    <h1 class="weather-temp" id="weather-temp-max">23° C</h1>
+                </div>
+                <div class="max-weather flex">
+                    <h1 class="weather-temp-text">Min:</h1>
+                    <h1 class="weather-temp" id="weather-temp-min"></h1>
+                </div>
+                <h1 class="weather-temp" id="weather-temp-min"></h1>
+                <div class="item-footer flex">
+                    <div class="weather-prec flex">
+                        <img src="humidity.png" alt="">
+                        <div class="footer-text flex">
+                            <h3 class="h3-text" id="weather-prec"></h3>
+                            <p>Humidity</p>
+                        </div>
+                    </div>
+                    <div class="weather-wind flex">
+                        <img src="wind.png" alt="">
+                        <div class="footer-text flex">
+                            <h3 class="h3-text" id="weather-wind"></h3>
+                            <p>Wind</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="cur-time flex">
+                    <h5>Date: </h5>
+                    <h5 id="cur-time-id"></h5>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <template id="weather-item-template-current">
+        <div class="weather-item flex">
+            <img src="" alt="" class="weather-icon" id="weather-img">
+            <div class="weather-data flex">
+                <h1 class="weather-head" id="weather-head">Quick desc</h1>
+                <div class="max-weather flex">
+                    <h1 class="weather-temp-text">Current Temp: </h1>
+                    <h1 class="weather-temp" id="weather-temp-cur"></h1>
+                </div>
+                <h1 class="weather-temp" id="weather-temp-min"></h1>
+                <div class="item-footer flex">
+                    <div class="weather-prec flex">
+                        <img src="humidity.png" alt="">
+                        <div class="footer-text flex">
+                            <h3 class="h3-text" id="weather-prec"></h3>
+                            <p>Humidity</p>
+                        </div>
+                    </div>
+                    <div class="weather-wind flex">
+                        <img src="wind.png" alt="">
+                        <div class="footer-text flex">
+                            <h3 class="h3-text" id="weather-wind"></h3>
+                            <p>Wind</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="last-updated flex">
+                    <h3>Last updated at:</h3>
+                    <h3 id="last-updated"></h3>
+                </div>
+            </div>
+        </div>
+    </template>
+    <script src="script.js"></script>
+</body>
+</html>
